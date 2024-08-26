@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>p1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="p1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-16-Copy-4" transform="translate(8.000000, 8.000000)">
+            <g id="Group-16-Copy-2">
+                <g id="Group-16-Copy">
+                    <rect id="Rectangle" fill="#FFEBB3" x="10" y="13" width="38" height="23" rx="4"></rect>
+                    <path d="M63.7283951,83.0898876 C63.7283951,84.1448136 62.8329646,85 61.7283951,85 L2,85 C0.8954305,85 0,84.1448136 0,83.0898876 L0,1.91011236 C0,0.855186433 0.8954305,0 2,0 L61.7283951,0 C62.8329646,0 63.7283951,0.855186433 63.7283951,1.91011236 L63.7283951,48.7078652 L63.7283951,48.7078652" id="Path" stroke="#F7B500" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <g id="Group" transform="translate(11.000000, 45.000000)">
+                        <g id="chasci">
+                            <polygon id="Path-2-Copy" fill="#FFFFFF" points="2 12 10 12 21 9.9475983e-14 41 9.96494554e-14 53 12 72 15 73 25 5 25 2 22"></polygon>
+                            <polygon id="Path-2-Copy" stroke="#160A30" stroke-width="4" stroke-linejoin="round" points="2.27309491e-13 12 10 12 21 -3.55271368e-13 41 -3.55097896e-13 53 12 72 15 73 25 5 25 2.27309491e-13 22"></polygon>
+                            <rect id="Rectangle" fill="#160A30" x="35" y="16" width="4" height="3" rx="1"></rect>
+                            <rect id="Rectangle-Copy" fill="#160A30" x="23" y="16" width="4" height="3" rx="1"></rect>
+                            <line x1="8" y1="12" x2="52" y2="12" id="Line-Copy" stroke="#160A30" stroke-width="4" stroke-linecap="square"></line>
+                            <line x1="31" y1="1" x2="31" y2="25" id="Line-2" stroke="#160A30" stroke-width="4" stroke-linecap="square"></line>
+                        </g>
+                        <g id="rodas" transform="translate(5.000000, 17.500000)">
+                            <circle id="Oval-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" cx="7" cy="7.5" r="7"></circle>
+                            <circle id="Oval-Copy-2" stroke="#160A30" stroke-width="4" fill="#FFFFFF" cx="10" cy="7.5" r="7"></circle>
+                            <circle id="Oval-Copy-3" stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" cx="46" cy="7.5" r="7"></circle>
+                            <circle id="Oval-Copy-3" stroke="#160A30" stroke-width="4" fill="#FFFFFF" cx="49" cy="7.5" r="7"></circle>
+                            <circle id="Oval" fill="#160A30" cx="49" cy="7.5" r="2"></circle>
+                            <circle id="Oval-Copy-4" fill="#160A30" cx="10" cy="7.5" r="2"></circle>
+                        </g>
+                    </g>
+                    <rect id="Rectangle" fill="#F7B500" x="10" y="13" width="38" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-3" fill="#F7B500" x="19" y="31" width="29" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#F7B500" x="10" y="31" width="5" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#F7B500" x="10" y="22" width="15" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-5" fill="#F7B500" x="29" y="22" width="19" height="5" rx="2.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

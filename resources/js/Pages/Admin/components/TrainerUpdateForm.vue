@@ -1,0 +1,105 @@
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+import { router } from '@inertiajs/vue3';
+import { useForm } from '@inertiajs/vue3';
+import { usePage } from '@inertiajs/vue3';
+
+
+
+const form = useForm({
+      name: null,
+      age: null,
+      address: null,
+      phone: null,
+      description:null,
+      car_id:null,
+    });
+
+
+const trainer = usePage().props.trainer    
+
+
+function submitForm(id){
+        router.put(`/admin/dashbord/Trainers/${id}`, form);
+
+}  
+
+onMounted(() => {
+  initFlowbite();
+  // Update form values with car attributes
+  if (trainer) {
+    form.name = trainer.name || '';
+    form.age = trainer.age || '';
+    form.address = trainer.address || '';
+    form.phone = trainer.phone || '';
+    form.description = trainer.description || '';
+    form.car_id = trainer.car_id || '';
+  }
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template>
+    <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+        Add Trainer
+    </h3>
+    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Close modal</span>
+    </button>
+</div>
+<form @submit.prevent="submitForm(trainer.id)">
+    <div class="grid gap-4 mb-4 sm:grid-cols-2">
+        <div>
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name </label>
+            <input v-model="form.name" type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" >
+        </div>
+        <div>
+            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
+            <input v-model="form.age" type="text" name="age" id="distance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="age" >
+        </div>
+        <div>
+            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+            <input v-model="form.address"  type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="address" >
+        </div>
+        <div>
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+            <input v-model="form.phone" type="text" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="phone" >
+        </div>
+        <div>
+            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+            <input v-model="form.description"  type="text" name="description" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="description" >
+        </div>
+        <div>
+            <label for="car_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">car_id</label>
+            <input v-model="form.car_id"  type="text" name="car_id" id="car_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="car_id" >
+        </div>
+
+
+    </div>
+    <button type="submit" class="bg-blue-500 text-black inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+        <svg class="mr-1 -ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+        Update Trainer
+    </button>
+</form>
+</template>
